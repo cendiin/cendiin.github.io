@@ -75,15 +75,18 @@ function deleteOne() {
     let lastString = value[value.length - 1]
     if (lastString == '^' || lastString == '-' || lastString == '+' || lastString == '*' || lastString == '/'){
         operatorUsed = false
-        decimalUsed = true
+        if (decimalUsed == false){ //after deleting an operator checks the decimalUsed flag and keeps the state so that another decimal
+            decimalUsed = false    //can or cannot be used again
+        } else if (decimal == true) {
+            decimalUsed = true
+        }
     }
     if (lastString == '.'){
         decimalUsed = false
     }
     if (document.getElementById("text-field").value.length == 1 || document.getElementById("text-field").value == '0'){
         document.getElementById("text-field").value = '0';
-    }
-    else {
+    } else {
         document.getElementById("text-field").value = document.getElementById("text-field").value.substring(0, document.getElementById("text-field").value.length - 1)
     }
 }
