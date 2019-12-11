@@ -4,12 +4,19 @@ function setup(){
     }
 
 function sqrt(){
-    document.getElementById("text-field").value = Math.sqrt(document.getElementById("text-field").value)
+    let value = document.getElementById("text-field").value
+    value = Math.sqrt(value)
+    console.log(value)
+    if (Object.is(value, NaN)){
+        //checks if value is a number and does nothing if it isnt
+    } else {
+        document.getElementById("text-field").value = value
+    }
 }
 
 function equals() {
     const operations = [
-    {'^': (a, b) => Math.pow(a, b)},
+    {'^': (a, b) => Math.pow(a, b)}, // a map of operators
     {'*': (a, b) => a * b}, 
     {'/': (a, b) => a / b},
     {'+': (a, b) => a + b}, 
@@ -25,8 +32,7 @@ function equals() {
     let newCalc = 0
     currentOperation = null
 
-    // parses string into numbers and operator strings array [3,"/",3]
-    split.forEach(function(i){     
+    split.forEach(function(i){ // parses string into numbers and operator strings array [3,"/",3]    
         if (i == '*' || i == '/' || i == '-' || i == '+' || i == '^'){
             calculation.push(i)
             } else {
@@ -34,13 +40,13 @@ function equals() {
             }
     })
 
-    if (calculation.length <= 1 || lastString == '^' ||lastString == '*' || lastString == '/' || lastString == '+' || lastString == '-'){
-        document.getElementById("text-field").value = value
+    if (calculation.length <= 1 || lastString == '^' || lastString == '*' || lastString == '/' || lastString == '+' || lastString == '-'){
+        //document.getElementById("text-field").value = value
     }
     else {
         operations.forEach(function(i){
             calculation.forEach(function(j){
-                 if (Object.keys(i) == j) {
+                if (Object.keys(i) == j) {
                     //map function to variable
                     currentOperation = Object.values(i)[0]
                     if (calculationStack.length < 1){
@@ -52,7 +58,7 @@ function equals() {
                     else {
                         calculationStack[0] = currentOperation(calculation[calculation.indexOf(j)-1], calculationStack[0])
                     }
-                  }
+                }
             })
         })
         if (value.includes('.')){
