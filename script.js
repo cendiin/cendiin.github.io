@@ -8,7 +8,7 @@ function sqrt(){
     value = Math.sqrt(value)
     console.log(value)
     if (Object.is(value, NaN)){
-        //checks if value is a number and does nothing if it isnt
+        //checks if value is a number and does nothing if it is
     } else {
         document.getElementById("text-field").value = value
     }
@@ -17,10 +17,10 @@ function sqrt(){
 function equals() {
     const operations = [
     {'^': (a, b) => Math.pow(a, b)}, // a map of operators
-    {'*': (a, b) => a * b}, 
-    {'/': (a, b) => a / b},
-    {'+': (a, b) => a + b}, 
-    {'-': (a, b) => a - b}
+    {'*': (a, b) => (a * b)}, 
+    {'/': (a, b) => (a / b)},
+    {'+': (a, b) => (a + b)},
+    {'-': (a, b) => (a - b)}
     ]
     const value = document.getElementById("text-field").value
     let lastString = value[value.length - 1]
@@ -36,37 +36,42 @@ function equals() {
         if (i == '*' || i == '/' || i == '-' || i == '+' || i == '^'){
             calculation.push(i)
             } else {
-                calculation.push(parseFloat(i));
+                let multTen = parseFloat(i) * 10// multiplies by 10 to fix floating points
+                calculation.push(multTen);
             }
     })
-
+    console.log(calculation)
     if (calculation.length <= 1 || lastString == '^' || lastString == '*' || lastString == '/' || lastString == '+' || lastString == '-'){
         //document.getElementById("text-field").value = value
-    }
-    else {
+    }   else {
+        let prevOperatorPos = 0
         operations.forEach(function(i){
-            calculation.forEach(function(j){
+            calculation.forEach(function(j,operatorPos){
                 if (Object.keys(i) == j) {
+                    if (j == '*' || j == '/'){
+                        prevOperatorPos = operatorPos
+                    }
                     //map function to variable
-                    currentOperation = Object.values(i)[0]
+                        currentOperation = Object.values(i)[0]
                     if (calculationStack.length < 1){
-                        calculationStack[0] = currentOperation(calculation[calculation.indexOf(j)-1], calculation[calculation.indexOf(j)+1])
-                    }
-                    else if (calculationStack.length >= 1){
-                        calculationStack[0] = currentOperation(calculationStack[0], calculation[calculation.indexOf(j)+1])
-                    }
-                    else {
-                        calculationStack[0] = currentOperation(calculation[calculation.indexOf(j)-1], calculationStack[0])
-                    }
+                        calculationStack[0] = currentOperation(calculation[operatorPos-1], calculation[operatorPos+1])
+                        console.log('previousPos+nextPos')
+                    }   else if ((calculationStack.length >= 1) && (operatorPos < prevOperatorPos)){
+                        calculationStack[0] = currentOperation(calculation[operatorPos-1], calculationStack[0])
+                        console.log('prevpos+stack')                        
+                    }  else if ((calculationStack.length >= 1) && (operatorPos > prevOperatorPos)){
+                        calculationStack[0] = currentOperation(calculationStack[0], calculation[operatorPos+1])
+                        console.log('stack+nextPos') 
                 }
-            })
+            }
         })
-        if (value.includes('.')){
-            document.getElementById("text-field").value = calculationStack[0]
-            decimalUsed = true   
-        } else {
-            document.getElementById("text-field").value = calculationStack[0] 
-        }   
+    })
+    if (value.includes('.')){
+        document.getElementById("text-field").value = calculationStack[0] / 10 // divides by ten to fix floating points
+        decimalUsed = true   
+    }   else {
+            document.getElementById("text-field").value = calculationStack[0] / 10 // divides by ten to fix floating points
+    }      
     }
 }
 
