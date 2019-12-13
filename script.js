@@ -18,8 +18,8 @@ function sqrt(){
 function equals() {
     const operations = [
     {'^': (a, b) => Math.pow(a, b)}, // a map of operators
-    {'*': (a, b) => (a * b)}, 
-    {'/': (a, b) => (a / b)},
+    {'×': (a, b) => (a * b)}, 
+    {'÷': (a, b) => (a / b)},
     {'+': (a, b) => (a + b)},
     {'-': (a, b) => (a - b)}
     ]
@@ -27,28 +27,28 @@ function equals() {
     let lastString = value[value.length - 1]
     //reg exp splits string into array of numbers and operator strings to output to string parser
     // | seperates individual operators, \ escapes to use the operator as a string, the final '+' looks for continous characters
-    let split = value.split(/(\/|\*|\+|\-|\^)+/)
+    let split = value.split(/(\÷|\×|\+|\-|\^)+/)
     let calculation = []
     let calculationStack = []
     let newCalc = 0
     currentOperation = null
-
+    
     split.forEach(function(i){ // parses string into numbers and operator strings array [3,"/",3]    
-        if (i == '*' || i == '/' || i == '-' || i == '+' || i == '^'){
+        if (i == '×' || i == '÷' || i == '-' || i == '+' || i == '^'){
             calculation.push(i)
             } else {
                 calculation.push(parseFloat(i));
             }
     })
     console.log(calculation)
-    if (calculation.length <= 1 || lastString == '^' || lastString == '*' || lastString == '/' || lastString == '+' || lastString == '-'){
+    if (calculation.length <= 1 || lastString == '^' || lastString == '×' || lastString == '÷' || lastString == '+' || lastString == '-'){
         //document.getElementById("text-field").value = value
     }   else {
         let prevOperatorPos = 0
         operations.forEach(function(i){
             calculation.forEach(function(j,operatorPos){
                 if (Object.keys(i) == j) {
-                    if (j == '*' || j == '/'){
+                    if (j == '×' || j == '÷'){
                         prevOperatorPos = operatorPos
                     }
                     currentOperation = Object.values(i)[0] //map function to variable
@@ -68,7 +68,7 @@ function equals() {
     if (value.includes('.')){
         decimalUsed = true
         if(calculationStack[0].toString().length > 10){
-            document.getElementById("text-field").value = calculationStack[0].toFixed(1)
+            document.getElementById("text-field").value = calculationStack[0].toFixed(3)
         }   else {
                 document.getElementById("text-field").value = calculationStack[0]
         }   
@@ -81,7 +81,7 @@ function equals() {
 function deleteOne() {
     let value = document.getElementById("text-field").value
     let lastString = value[value.length - 1]
-    if (lastString == '^' || lastString == '-' || lastString == '+' || lastString == '*' || lastString == '/'){
+    if (lastString == '^' || lastString == '-' || lastString == '+' || lastString == '×' || lastString == '÷'){
         operatorUsed = false
         if (decimalUsed == false){ //after deleting an operator checks the decimalUsed flag and keeps the state so that another decimal
             decimalUsed = false    //can or cannot be used again
@@ -106,16 +106,16 @@ function clearScreen() {
 }
 
 function buttons(str){
-    let operatorStr = str.includes('^') || str.includes('-') || str.includes('+') || str.includes('/') || str.includes('*') 
+    let operatorStr = str.includes('^') || str.includes('-') || str.includes('+') || str.includes('÷') || str.includes('×') 
     let value = document.getElementById("text-field").value
     let lastString = value[value.length - 1]
 
     //used to flag if an operator was used to limit multiple decimals on the same number
-    if (str == '*' || str == '/' || str == '+' || str == '-' || str == '^'){
+    if (str == '×' || str == '÷' || str == '+' || str == '-' || str == '^'){
         operatorUsed = true
         decimalUsed = false
     }
-    if ((lastString == ('^') || lastString == ('-') || lastString == ('+') || lastString == ('*') || lastString == ('/')) && (operatorStr)) {
+    if ((lastString == ('^') || lastString == ('-') || lastString == ('+') || lastString == ('×') || lastString == ('÷')) && (operatorStr)) {
         //doesnt allow multiple operators in a row when last string matches
     }   else if (lastString == '.' && str == '.'){
             //doesnt allow multiple decimals in a row when last string matches
