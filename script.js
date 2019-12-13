@@ -1,4 +1,5 @@
 function setup(){
+    //global variables
     window.operatorUsed = false
     window.decimalUsed = false
     }
@@ -36,8 +37,7 @@ function equals() {
         if (i == '*' || i == '/' || i == '-' || i == '+' || i == '^'){
             calculation.push(i)
             } else {
-                let multTen = parseFloat(i) * 10// multiplies by 10 to fix floating points
-                calculation.push(multTen);
+                calculation.push(parseFloat(i));
             }
     })
     console.log(calculation)
@@ -51,8 +51,7 @@ function equals() {
                     if (j == '*' || j == '/'){
                         prevOperatorPos = operatorPos
                     }
-                    //map function to variable
-                        currentOperation = Object.values(i)[0]
+                    currentOperation = Object.values(i)[0] //map function to variable
                     if (calculationStack.length < 1){
                         calculationStack[0] = currentOperation(calculation[operatorPos-1], calculation[operatorPos+1])
                         console.log('previousPos+nextPos')
@@ -67,10 +66,14 @@ function equals() {
         })
     })
     if (value.includes('.')){
-        document.getElementById("text-field").value = calculationStack[0] / 10 // divides by ten to fix floating points
-        decimalUsed = true   
+        decimalUsed = true
+        if(calculationStack[0].toString().length > 10){
+            document.getElementById("text-field").value = calculationStack[0].toFixed(1)
+        }   else {
+                document.getElementById("text-field").value = calculationStack[0]
+        }   
     }   else {
-            document.getElementById("text-field").value = calculationStack[0] / 10 // divides by ten to fix floating points
+            document.getElementById("text-field").value = calculationStack[0]
     }      
     }
 }
@@ -107,7 +110,7 @@ function buttons(str){
     let value = document.getElementById("text-field").value
     let lastString = value[value.length - 1]
 
-    // //used to flag if an operator was used to limit multiple decimals on the same number
+    //used to flag if an operator was used to limit multiple decimals on the same number
     if (str == '*' || str == '/' || str == '+' || str == '-' || str == '^'){
         operatorUsed = true
         decimalUsed = false
