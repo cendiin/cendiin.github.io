@@ -193,6 +193,7 @@ header {
     align-items: center;
     text-align: center;
     min-height: 1000px;
+    
 }
 
 .mission-statement-container {
@@ -230,15 +231,17 @@ header {
 
 .offer-container {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
 
 
 }
 
 .offer-container img {
-    height: 80px;
+    height: 70px;
     width: 40%;
     object-fit: contain;
 }
@@ -252,7 +255,7 @@ header {
 .support {
     width: 25%;
     min-width: 120px;
-    margin: 0 30px;
+    margin: 30px 30px;
 }
 
 p.offer-content {
