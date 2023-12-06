@@ -21,6 +21,9 @@ p {
 .header-menu a {
     font-size: 20px;
     padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
 
 /*header start*/
@@ -86,11 +89,6 @@ header {
     padding-left: 1rem;
     position: relative;
     font-size: small;
-}
-
-a {
-    text-decoration: none;
-    color: black;
 }
 
 .header-menu a:hover {
