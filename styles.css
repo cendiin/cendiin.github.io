@@ -5,7 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
+    scroll-behavior: smooth !important;
 }
 
 h2 {
@@ -89,11 +89,9 @@ header {
 }
 
 a {
-    scroll-behavior: smooth;
     text-decoration: none;
     color: black;
 }
-
 
 .header-menu a:hover {
     text-decoration: underline;
