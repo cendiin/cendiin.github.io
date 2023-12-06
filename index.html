@@ -1,49 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' type ='text/css' href='style.css'>
-    <script src="script.js"></script>
-    <title>Calculator</title>
-</head>
+<html lang="">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Snow Tech Group</title>
+<link href="styles.css" rel="stylesheet" />
+
+
+<header>
+
+    <div class="header-container">
+        <div class="logo">
+            <img src="logo.png">
+            <div class="header-logo">
+                <h1>Snow Tech Group</h1>
+            </div>
+        </div>
+
+        <div class="menu-container">
+            <div class="header-menu">
+                <h2 class="menu-contents">Who we are</h2>
+                <h2 class="menu-contents">What we offer</h2>
+                <h2 class="menu-contents">Our clients</h2>
+                <div class="quick-support-button">
+                    <button class="quick-support"
+                        onclick="location.href='ms-windows-store://pdp?hl=en-us&gl=us&productid=9P7BP5VNWKX5&mode=mini&pos=0%2C0%2C2560%2C1400'">Quick
+                        Support</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
 <body>
-    <h1> Calculator </h1>
-    <div id="grid-container">
-        <form>
-            <input id="text-field" type="text" value="0" readonly>
-        </form>
-        <br>
-    <div id="button-container">
-            <button id="button" class= "dark-button" onclick= "sqrt()">√</button>
-            <button id="button" class= "dark-button" onclick= "buttons('^')">^</button>
-            <button id="button" class= "dark-button" onclick= "deleteOne()">DEL</button>
-            <button id="button" class= "dark-button" onclick= "clearScreen()">CE</button>
-            <br>
-            <button id="button" class= "light-button" onclick= "buttons('7')">7</button>
-            <button id="button" class= "light-button" onclick= "buttons('8')">8</button>
-            <button id="button" class= "light-button" onclick= "buttons('9')">9</button>
-            <button id="button" class= "dark-button" onclick= "buttons('÷')">÷</button>
-            <br>
-            <button id="button" class= "light-button" onclick= "buttons('4')">4</button>
-            <button id="button" class= "light-button" onclick= "buttons('5')">5</button>
-            <button id="button" class= "light-button" onclick= "buttons('6')">6</button>
-            <button id="button" class= "dark-button" onclick= "buttons('×')">×</button>
-            <br>
-            <button id="button" class= "light-button" onclick= "buttons('1')">1</button>
-            <button id="button" class= "light-button" onclick= "buttons('2')">2</button>
-            <button id="button" class= "light-button" onclick= "buttons('3')">3</button>
-            <button id="button" class= "dark-button" onclick= "buttons('-')">-</button>
-            <br>
-            <button id="button" class= "light-button" onclick= "buttons('0')">0</button>
-            <button id="button" class= "light-button" onclick= "buttons('.')">.</button>
-            <button id="button" class= "bright-button" onclick= "equals('=')">=</button>
-            <button id="button" class= "dark-button" onclick= "buttons('+')">+</button>
+    <main>
+        <section class="mission-header-section">
+            <div class="mission-header-container">
+                <div class="left-mission-header">
+                    <h2>Your Business Technology Solutions Provider</h2>
+                    <div class="partner">
+                        <div class="google-partner">
+                            <img src="googlepartner.png" alt="Google Partner">
+                        </div>
+                        <div class="microsoft-partner">
+                            <img src="microsoftpartner.png" alt="Microsoft Partner">
+                        </div>
+                    </div>
+                </div>
 
-    </div>
-    <script>setup()</script>
+                <div class="right-mission-header">
+                    <h2>"Service is our contract."</h2>
+                </div>
+            </div>
+
+
+
+
+        </section>
+        <section class="mission-statement-section">
+            <div class="mission-statement-container">
+                <h2>What is Snow Tech Group?</h2>
+                <p>In the industry of computer services and support, availability and follow through for the client
+                    tends to be lacking. All computer support businesses can repair PC's, develop websites, setup
+                    networks, and design software, and there are many out there. However, you must ask yourself; What
+                    level of service am i currently receiving? Can I reach technical support when i need them? What is
+                    the response time, and do they call back immediately? Computers and technology play a critical role
+                    in business and you cannot afford to have your computer systems down for a long period of time. Snow
+                    Tech Group understands this and that is why we are always there providing the utmost service in a
+                    timely manner.</p>
+                <p><b>"we can always be reached, day or night"</b></p>
+                <p>Our goal is to first provide superior customer service. And, secondly provide technology solutions.
+                    Most any one can provide you with hardware and software. Our niche is providing business solutions
+                    that utilize these technologies. Our strong commitment to customer service means we don't just sell
+                    services, we help you use them. We take pride in what we do.</p>
+            </div>
+
+
+
+
+        </section>
+        <section class="offer-section">
+            <h2>What is it that we do?</h2>
+            <div class="offer-container">
+                <div class="hardware">
+                    <img src="hardware.png">
+                    <h3>Hardware</h3>
+                    <p class="offer-content">Workstations</p>
+                    <p class="offer-content">Servers</p>
+                    <p class="offer-content">Networking</p>
+                    <p class="offer-content">VoIP Phones</p>
+                    <p class="offer-content">Cameras</p>
+                    <p class="offer-content">Repairs</p>
+                </div>
+                <div class="website">
+                    <img src="website.png">
+                    <h3>Website</h3>
+                    <p class="offer-content">Designs</p>
+                    <p class="offer-content">Hosting</p>
+                    <p class="offer-content">Registration</p>
+                </div>
+                <div class="support">
+                    <img src="support.png">
+                    <h3>Support</h3>
+                    <p class="offer-content">Remote Support</p>
+                    <p class="offer-content">Consulation</p>
+                    <p class="offer-content">Offsite Backups</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section class="client-section">
+            <div class="clients-header">
+                <h2>Our Clients</h2>
+            </div>
+            <div class="clients-content">
+                <p class="clients-content">We have numerous clients in the upstate and more.</p>
+                <p class="clients-content">Please contact us for references.</p>
+                <br>
+            </div>
+            <div class="client-id-form">
+                <div class="form">
+                    <form class="client-id-input">
+                        <input type="text" id="clientId" placeholder="Client ID">
+                        <input class="input-button" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
+
+
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-address">
+            <h5>Mailing Address: 301 W Poinsett St. Greer SC, 29650</h5>
+        </div>
+        <div class="footer-address">
+            <h5>Telephone: 864.469.0677</h5>
+        </div>
+    </div>
+</footer>
 
 </html>
