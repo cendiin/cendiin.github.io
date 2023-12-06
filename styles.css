@@ -7,9 +7,11 @@
     padding: 0;
     scroll-behavior: smooth !important;
 }
+main{
+    width: 100vw;
+}
 
 h2 {
-    padding: 30px;
     font-size: 50px;
 }
 
@@ -30,7 +32,6 @@ p {
 header {
     width: 100%;
     /*padding-bottom: 5rem;*/
-
     margin: 0;
 }
 
@@ -45,8 +46,8 @@ header {
 }
 
 .logo {
-    min-width: 100px;
-    min-height: 105px;
+    min-width: 10%;
+    min-height: 10%;
     max-width: 350px;
     max-height: 105px;
     display: flex;
@@ -74,7 +75,7 @@ header {
     display: flex;
     justify-content: right;
     align-items: center;
-    min-width: 440px;
+    min-width: 300px;
 }
 
 .header-menu {
@@ -119,7 +120,6 @@ header {
 
 
 
-
 /*header end*/
 
 
@@ -140,8 +140,8 @@ header {
     align-items: center;
     align-content: center;
     justify-content: center;
-    flex-wrap: wrap-reverse;
-    max-width: 80rem;
+    flex-direction: column;
+    max-width: 600px;
 }
 
 .left-mission-header {
@@ -157,33 +157,34 @@ header {
 
 .right-mission-header {
     font-size: 20px;
-    min-width: 300px;
+    max-width: 600px;
     display: flex;
     align-items: center;
-    padding: 125px;
+    padding-bottom: 150px;
 }
 
 .partner-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
+    align-items: center;
     flex-wrap: nowrap;
-
 }
 
 .partner-container img {
     height: 100px;
-    width: 100%;
+    width: 270px;
     min-width: 150px;
     object-fit: contain;
 }
 
 .google-partner {
-    margin-right: 5px;
+    margin: 5px;
 }
 
 .microsoft-partner {
-    margin-left: 5px;
+    margin: 5px;
 }
 
 /*mission header end*/
@@ -204,8 +205,8 @@ header {
 }
 
 .mission-statement-container {
-    margin: 25px;
-    min-width: 396px;
+    padding-top: 40px;
+    min-width: 370px;
     max-width: 1100px;
 }
 
@@ -232,7 +233,12 @@ header {
     min-height: 700px;
     margin: auto;
     background-color: #dde5f4;
-    padding-top: 100px;
+    padding-top: 40px;
+}
+
+.offer-section h2 {
+    padding: 15px;
+    padding-bottom: 45px;
 }
 
 .offer-container {
@@ -242,8 +248,6 @@ header {
     align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-
-
 }
 
 .offer-container img {
@@ -260,7 +264,7 @@ header {
 .website,
 .support {
     width: 25%;
-    min-width: 120px;
+    min-width: 200px;
     margin: 30px 30px;
 }
 
@@ -284,6 +288,7 @@ p.offer-content {
     min-height: 300px;
     background-color: #668eab;
     color: aliceblue;
+    padding-top: 40px;
 }
 
 .client-id-form {
@@ -347,3 +352,53 @@ p.clients-content {
 .footer-address {
     margin: 20px;
 }
+
+
+
+
+@media (max-width: 480px) {
+    .quick-support {
+      display: none;
+
+    }
+    .partner-container{
+        flex-direction: column;
+    }
+    
+    .header-container {
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    
+    .logo {
+        min-width: 0%;
+        min-height: 0%;
+    }
+    .logo img {
+        width: 80%;
+        height: 80%;
+    }
+    
+    .menu-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        min-width: 300px;
+    }
+    
+    .header-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .menu-contents {
+        font-size: small;
+    }
+
+
+  }
