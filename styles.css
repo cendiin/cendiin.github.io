@@ -18,7 +18,7 @@ p {
     margin: 5rem;
 }
 
-.header-menu h3 {
+.header-menu a {
     font-size: 20px;
     padding: 20px;
 }
@@ -88,7 +88,14 @@ header {
     font-size: small;
 }
 
-.header-menu h3:hover {
+a {
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: black;
+}
+
+
+.header-menu a:hover {
     text-decoration: underline;
     cursor: pointer;
     transition: 0.7s;
@@ -112,6 +119,10 @@ header {
     background-color: #002ead;
     transition: 0.7s;
 }
+
+
+
+
 
 /*header end*/
 
