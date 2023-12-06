@@ -371,14 +371,14 @@ p.clients-content {
 
 
     .header-container {
-        justify-content: space-between;
-        flex-direction: column;
+        justify-content: center;
+        flex-direction: row;
         flex-wrap: wrap;
         margin: auto;
     }
 
     .header-logo {
-        min-width: 200px;
+        min-width: 250px;
     }
 
     .logo img {
@@ -398,18 +398,15 @@ p.clients-content {
 
     .header-menu {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
         align-items: center;
+        flex-direction: row;
         margin: auto;
-        flex-wrap: unset;
+
     }
 
-    .header-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-    }
 
 
     .logo {
