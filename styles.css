@@ -12,6 +12,10 @@ main {
     width: 100vw;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 h2 {
     font-size: 50px;
 }
@@ -378,7 +382,7 @@ p.clients-content {
     }
 
     .header-logo {
-        min-width: 250px;
+        min-width: 240px;
     }
 
     .logo img {
@@ -388,7 +392,7 @@ p.clients-content {
 
     .menu-container {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-content: center;
         align-items: center;
         flex-direction: row;
@@ -407,6 +411,9 @@ p.clients-content {
 
     }
 
+    .header-menu a {
+        font-size: 16px;
+    }
 
 
     .logo {
@@ -418,9 +425,5 @@ p.clients-content {
         align-items: center;
     }
 
-    .menu-contents {
-        padding-left: 1rem;
-        font-size: small;
-    }
 
 }
