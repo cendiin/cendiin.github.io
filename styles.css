@@ -7,7 +7,8 @@
     padding: 0;
     scroll-behavior: smooth !important;
 }
-main{
+
+main {
     width: 100vw;
 }
 
@@ -148,6 +149,7 @@ header {
 
 .left-mission-header h2 {
     font-size: 40px;
+    padding-bottom: 25px;
 }
 
 .right-mission-header {
@@ -196,7 +198,7 @@ header {
     align-items: center;
     text-align: center;
     min-height: 1000px;
-    
+
 }
 
 .mission-statement-container {
@@ -318,11 +320,11 @@ p.clients-content {
     cursor: pointer;
 }
 
-::placeholder{
+::placeholder {
     padding-left: 5px;
 }
 
-.submit-container{
+.submit-container {
     display: flex;
     margin: auto;
     align-content: center;
@@ -353,13 +355,14 @@ p.clients-content {
 
 @media (max-width: 480px) {
     .quick-support {
-      display: none;
+        display: none;
 
     }
-    .partner-container{
+
+    .partner-container {
         flex-direction: column;
     }
-    
+
 
 
 
@@ -373,15 +376,16 @@ p.clients-content {
         flex-wrap: wrap;
         margin: auto;
     }
-    
+
     .header-logo {
         min-width: 200px;
     }
+
     .logo img {
         width: 90px;
         height: 90px;
     }
-    
+
     .menu-container {
         display: flex;
         justify-content: center;
@@ -390,7 +394,7 @@ p.clients-content {
         flex-direction: row;
         min-width: 0;
     }
-    
+
 
     .header-menu {
         display: flex;
@@ -407,7 +411,7 @@ p.clients-content {
         align-content: center;
     }
 
-    
+
     .logo {
         min-width: 10%;
         min-height: 10%;
@@ -416,9 +420,10 @@ p.clients-content {
         display: flex;
         align-items: center;
     }
+
     .menu-contents {
         padding-left: 1rem;
         font-size: small;
     }
 
-  }
+}
