@@ -52,7 +52,6 @@ header {
     max-height: 105px;
     display: flex;
     align-items: center;
-
 }
 
 .logo img {
@@ -71,7 +70,6 @@ header {
 }
 
 .menu-container {
-    position: relative;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -79,16 +77,13 @@ header {
 }
 
 .header-menu {
-    position: relative;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     margin: auto;
 }
 
 .menu-contents {
     padding-left: 1rem;
-    position: relative;
     font-size: small;
 }
 
@@ -243,7 +238,7 @@ header {
 
 .offer-container {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     justify-content: center;
     align-content: center;
     flex-direction: row;
@@ -365,20 +360,26 @@ p.clients-content {
         flex-direction: column;
     }
     
+
+
+
+
+
+
+
     .header-container {
         justify-content: space-between;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         margin: auto;
     }
     
-    .logo {
-        min-width: 0%;
-        min-height: 0%;
+    .header-logo {
+        min-width: 200px;
     }
     .logo img {
-        width: 80%;
-        height: 80%;
+        width: 90px;
+        height: 90px;
     }
     
     .menu-container {
@@ -386,19 +387,38 @@ p.clients-content {
         justify-content: center;
         align-content: center;
         align-items: center;
-        min-width: 300px;
+        flex-direction: row;
+        min-width: 0;
     }
     
+
+    .header-menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: auto;
+        flex-wrap: unset;
+    }
+
     .header-menu {
         display: flex;
         justify-content: center;
         align-items: center;
         align-content: center;
     }
+
     
+    .logo {
+        min-width: 10%;
+        min-height: 10%;
+        max-width: 350px;
+        max-height: 105px;
+        display: flex;
+        align-items: center;
+    }
     .menu-contents {
+        padding-left: 1rem;
         font-size: small;
     }
-
 
   }
