@@ -222,7 +222,6 @@ header {
     align-content: center;
     text-align: center;
     align-items: center;
-    align-content: center;
     min-height: 700px;
     margin: auto;
     background-color: #dde5f4;
@@ -291,7 +290,10 @@ p.clients-content {
 
 #clientId {
     background-color: white;
+    width: 200px;
+    height: 30px;
     border: none;
+    font-size: 20px;
 }
 
 .input-button {
@@ -299,14 +301,27 @@ p.clients-content {
     color: white;
     border: none;
     border-radius: 3px;
-    min-height: 22px;
-    min-width: 60px;
+    min-height: 30px;
+    min-width: 80px;
 }
 
 .input-button:hover {
     background-color: #002ead;
     transition: 0.7s;
     cursor: pointer;
+}
+
+::placeholder{
+    padding-left: 5px;
+}
+
+.submit-container{
+    display: flex;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 /*Footer Start*/
