@@ -166,15 +166,19 @@ header {
 
 .offer-links-container{
     display: flex;
-    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
     align-content: center;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:  20px 80px;
+    margin: 0 10px;
 }
 
 .offer-links-container img{
-    margin: 0 175px;
     height: 110px;
-    width: 50%;
+    width: 70%;
     object-fit: contain;
 }
 
@@ -295,7 +299,7 @@ header {
 
 
 
-/*offer start*/
+/*offer start-----------------------------------------------------------*/
 
 .offer-section {
     display: flex;
@@ -355,7 +359,7 @@ p.offer-content {
 
 
 
-/*Client ID Form */
+/*Client ID Form ---------------------------------------------------------------*/
 .client-section {
     text-align: center;
     min-height: 300px;
@@ -409,7 +413,7 @@ p.clients-content {
     justify-content: center;
 }
 
-/*Footer Start*/
+/*Footer Start--------------------------------------------------------------*/
 
 
 .footer-container {
@@ -438,10 +442,6 @@ p.clients-content {
     .partner-container {
         flex-direction: column;
     }
-
-
-
-
 
 
 
