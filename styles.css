@@ -9,7 +9,7 @@
 }
 
 main {
-    width: 100vw;
+    width: 100vw; 
 }
 
 h1 {
@@ -202,7 +202,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 1000px;
+    min-height: 900px;
 
 }
 
@@ -232,10 +232,10 @@ header {
     align-content: center;
     text-align: center;
     align-items: center;
-    min-height: 700px;
+    min-height: 650px;
     margin: auto;
     background-color: #dde5f4;
-    padding-top: 40px;
+    padding-top: 80px;
 }
 
 .offer-section h2 {
@@ -290,7 +290,7 @@ p.offer-content {
     min-height: 300px;
     background-color: #668eab;
     color: aliceblue;
-    padding-top: 40px;
+    padding-top: 60px;
 }
 
 .client-id-form {
