@@ -131,8 +131,9 @@ header {
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
-    min-height: 1000px;
-    background: #d4e2eb;
+    min-height: 800px;
+    background: linear-gradient(120deg,#d4e2eb,#779ed9);
+    color:white;
 }
 
 .mission-header-container {
@@ -153,7 +154,7 @@ header {
 
 .left-mission-header h2 {
     font-size: 40px;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
 }
 
 .right-mission-header {
