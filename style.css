@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+    font-family: Lato;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth !important;
+}
+
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 20px;
+    margin: 5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.header-menu a {
+    font-size: 20px;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+/*header start*/
+header {
+    width: 100%;
+    /*padding-bottom: 5rem;*/
+    margin: 0;
+}
+
+.header-container {
+    width: 100%;
+    background: #fffafa;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.logo {
+    min-width: 10%;
+    min-height: 10%;
+    max-width: 350px;
+    max-height: 105px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header-logo {
+    min-width: 300px;
+    margin-left: 5%;
+    position: relative;
+    display: flex;
+    justify-content: left;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-width: 300px;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.menu-contents {
+    font-size: 16px;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-menu a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.quick-support {
+    background-color: steelblue;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 0 1rem;
+    min-height: 30px;
+    min-width: 110px;
+}
+
+.quick-support:hover {
+    cursor: pointer;
+    background-color: #002ead;
+    transition: 0.7s;
+}
+
+
+
+
+/*header end*/
+
+
+
+/*mission header start*/
+.mission-header-section {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    min-height: 800px;
+    background: linear-gradient(120deg,#d4e2eb,#779ed9);
+    color:white;
+}
+
+.mission-header-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1000px;
+}
+
+.left-mission-header {
+    max-width: 620px;
+    min-width: 100px;
+    padding: 50px 0;
+}
+
+.left-mission-header h2 {
+    font-size: 40px;
+}
+
+.right-mission-header {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.offer-links-container{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:  20px 75px;
+    margin: 15px 10px;
+}
+
+.offer-links-container img{
+    height: 110px;
+    width: 70%;
+    object-fit: contain;
+}
+
+
+.offer-links-container a {
+    font-size: 25px;
+    padding: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+
+.offer-links-container a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.support-link, .technology-link,.website-link {
+    display: flex;
+    justify-content: center;   
+    align-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.offer-link {
+    
+}
+
+
+
+
+/* .hardware,
+.website,
+.support {
+    width: 25%;
+    min-width: 200px;
+    margin: 30px 30px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.partner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.partner-container img {
+    height: 100px;
+    width: 270px;
+    min-width: 150px;
+    object-fit: contain;
+}
+
+.google-partner {
+    margin: 5px;
+}
+
+.microsoft-partner {
+    margin: 5px;
+}
+ */
+
+
+
+/*mission header end*/
+
+
+
+
+
+
+/*mission statement start*/
+.mission-statement-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 900px;
+
+}
+
+.mission-statement-container {
+    padding-top: 40px;
+    min-width: 370px;
+    max-width: 800px;
+}
+
+.mission-statement-container h4 {
+    font-size: 30px;
+    padding: 20px;
+}
+
+
+/*mission statement end*/
+
+
+
+
+
+/*offer start-----------------------------------------------------------*/
+
+.offer-section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    min-height: 650px;
+    margin: auto;
+    background-color: #dde5f4;
+    padding-top: 80px;
+}
+
+.offer-section h2 {
+    padding: 15px;
+    padding-bottom: 45px;
+}
+
+.offer-container {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.offer-container img {
+    height: 70px;
+    width: 40%;
+    object-fit: contain;
+}
+
+.offer-container h3 {
+    font-size: 30px;
+}
+
+.hardware,
+.website,
+.support {
+    width: 25%;
+    min-width: 200px;
+    margin: 30px 30px;
+}
+
+p.offer-content {
+    margin: 3px;
+}
+
+/*offer end/
+ 
+
+
+/*Client ID Form ---------------------------------------------------------------*/
+.client-section {
+    text-align: center;
+    min-height: 300px;
+    background-color: #668eab;
+    color: aliceblue;
+    padding-top: 60px;
+}
+
+.client-id-form {
+    position: relative;
+    margin: 0 auto;
+}
+
+p.clients-content {
+    margin: 0;
+}
+
+#clientId {
+    background-color: white;
+    width: 200px;
+    height: 30px;
+    border: none;
+    font-size: 20px;
+
+}
+
+.clients-header {
+    margin-bottom: 30px;
+}
+
+
+.button {
+    background-color: steelblue;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    min-height: 50px;
+    min-width: 120px;
+    padding: 0 40px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: #002ead;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+::placeholder {
+    padding-left: 5px;
+}
+
+.submit-container {
+    display: flex;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Footer Start--------------------------------------------------------------*/
+
+
+.footer-container {
+    width: 100%;
+    min-height: 100px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b232b;
+}
+
+.footer-address {
+    margin: 0 20px;
+}
+
+/*Footer End--------------------------------------------------------------*/
+
+
+@media (max-width: 480px) {
+    .quick-support {
+        display: none;
+
+    }
+
+    .partner-container {
+        flex-direction: column;
+    }
+
+
+
+
+    .header-container {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .header-logo {
+        min-width: 240px;
+    }
+
+    .logo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .menu-container {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        flex-direction: row;
+        min-width: 0;
+    }
+
+
+    .header-menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin: auto;
+
+    }
+
+    .header-menu a {
+        font-size: 16px;
+    }
+
+
+    .logo {
+        min-width: 10%;
+        min-height: 10%;
+        max-width: 350px;
+        max-height: 105px;
+        display: flex;
+        align-items: center;
+    }
+
+
+}
+
+
+/* Support page ----------------------------- */
+
+.help-list{
+    text-align: left;
+}
+li {
+    padding-bottom: 5px;
+}
+
+
+/* Agent page */
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+
+
+
+
+
+
