@@ -27,18 +27,12 @@ ul {
 }
 
 button {
-    box-shadow: 3px 5px 5px black;
+    box-shadow: 4px 4px 7px rgb(95, 95, 95);
 }
 
 /*header start---------------------------------------------------*/
 
-.header-menu a {
-    font-size: 20px;
-    padding: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
+
 
 header {
     width: 100%;
@@ -86,21 +80,31 @@ header {
     min-width: 300px;
 }
 
+.menu-contents {
+    padding: 20px;
+    font-weight: bold;
+}
+
+
 .header-menu {
     display: flex;
     align-items: center;
     margin: auto;
 }
 
-.menu-contents {
+.header-menu a {
+    font-size: 20px;
     padding: 20px;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
 
+
 .header-menu a:hover {
-    text-decoration: underline;
     cursor: pointer;
-    transition: 0.7s;
+    transition: 0.3s;
+    border-bottom: 2px solid red;
 }
 
 .quick-support {
