@@ -26,6 +26,11 @@ ul {
     list-style: none;
 }
 
+button {
+    box-shadow: 3px 5px 5px black;
+}
+
+/*header start---------------------------------------------------*/
 
 .header-menu a {
     font-size: 20px;
@@ -35,10 +40,8 @@ ul {
     color: black;
 }
 
-/*header start*/
 header {
     width: 100%;
-    /*padding-bottom: 5rem;*/
     margin: 0;
 }
 
@@ -90,10 +93,8 @@ header {
 }
 
 .menu-contents {
-    font-size: 16px;
     padding: 20px;
     font-weight: bold;
-    text-decoration: none;
 }
 
 .header-menu a:hover {
@@ -117,16 +118,12 @@ header {
     background-color: #002ead;
     transition: 0.7s;
 }
+/*header end--------------------------------------------------------------------*/
 
 
 
-
-/*header end*/
-
-
-
-/*mission header start*/
-.mission-header-section {
+/*hero section  start*/
+.hero-section {
     display: flex;
     text-align: center;
     align-items: center;
@@ -137,7 +134,7 @@ header {
     background-image: linear-gradient(to top, #d4e2eb, #cbdde9, #c2d8e7, #b9d4e4, #b0cfe2, #a7cae1, #9ec4df, #95bfde, #8bb7dd, #82afdc, #7ca7db, #779ed9);    color:white;
 }
 
-.mission-header-container {
+.hero-container {
     display: flex;
     align-items: center;
     align-content: center;
@@ -146,21 +143,15 @@ header {
     max-width: 1000px;
 }
 
-.left-mission-header {
+.hero-header {
     max-width: 620px;
     min-width: 100px;
     padding: 50px 0;
+    margin: 20px;
 }
 
-.left-mission-header h2 {
-    font-size: 40px;
-}
-
-.right-mission-header {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    padding: 100px 0;
+.hero-header h2 {
+    font-size: 50px;
 }
 
 .offer-links-container{
@@ -205,69 +196,11 @@ header {
     flex-direction: column; 
 }
 
-.offer-link {
-    
-}
+
+/*hero section end------------------------------------------------------*/
 
 
-
-
-/* .hardware,
-.website,
-.support {
-    width: 25%;
-    min-width: 200px;
-    margin: 30px 30px;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-.partner-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
-.partner-container img {
-    height: 100px;
-    width: 270px;
-    min-width: 150px;
-    object-fit: contain;
-}
-
-.google-partner {
-    margin: 5px;
-}
-
-.microsoft-partner {
-    margin: 5px;
-}
- */
-
-
-
-/*mission header end*/
-
-
-
-
-
-
-/*mission statement start*/
+/*mission statement start----------------------------------------------*/
 .mission-statement-section {
     display: flex;
     justify-content: center;
@@ -289,11 +222,7 @@ header {
 }
 
 
-/*mission statement end*/
-
-
-
-
+/*mission statement end---------------------------------------------------*/
 
 /*offer start-----------------------------------------------------------*/
 
@@ -345,12 +274,10 @@ p.offer-content {
     margin: 3px;
 }
 
-/*offer end/
+/*offer end --------------------------------------------------------------------*/
  
-
-
-/*Client ID Form ---------------------------------------------------------------*/
-.client-section {
+/*Support Section ---------------------------------------------------------------*/
+.support-section {
     text-align: center;
     min-height: 300px;
     background-color: #668eab;
@@ -358,28 +285,9 @@ p.offer-content {
     padding-top: 60px;
 }
 
-.client-id-form {
-    position: relative;
-    margin: 0 auto;
-}
-
-p.clients-content {
-    margin: 0;
-}
-
-#clientId {
-    background-color: white;
-    width: 200px;
-    height: 30px;
-    border: none;
-    font-size: 20px;
-
-}
-
-.clients-header {
+.support-header {
     margin-bottom: 30px;
 }
-
 
 .button {
     background-color: steelblue;
@@ -391,6 +299,7 @@ p.clients-content {
     padding: 0 40px;
     margin: 5px;
     font-size: 20px;
+
 }
 
 .button:hover {
@@ -438,10 +347,9 @@ p.clients-content {
 
     }
 
-    .partner-container {
-        flex-direction: column;
+    .support-section {
+        display: none;
     }
-
 
 
 
@@ -470,7 +378,6 @@ p.clients-content {
         min-width: 0;
     }
 
-
     .header-menu {
         display: flex;
         justify-content: center;
@@ -485,7 +392,6 @@ p.clients-content {
     .header-menu a {
         font-size: 16px;
     }
-
 
     .logo {
         min-width: 10%;
@@ -506,15 +412,26 @@ p.clients-content {
     text-align: left;
 }
 li {
-    padding-bottom: 5px;
+    padding: 5px;
 }
 
 
 /* Agent page */
 
+.agent-header {
+    padding-top: 20px;
+}
+
 .button-container {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* grid-template-columns: repeat(4,1fr); */
+}
+
+.button-container button {
+
+    min-width: 230px;
 }
 
 
