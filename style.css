@@ -133,8 +133,8 @@ header {
     align-content: center;
     justify-content: center;
     min-height: 800px;
-    background: linear-gradient(120deg,#d4e2eb,#779ed9);
-    color:white;
+    /* background: linear-gradient(120deg,#d4e2eb,#779ed9); */
+    background-image: linear-gradient(to top, #d4e2eb, #cbdde9, #c2d8e7, #b9d4e4, #b0cfe2, #a7cae1, #9ec4df, #95bfde, #8bb7dd, #82afdc, #7ca7db, #779ed9);    color:white;
 }
 
 .mission-header-container {
