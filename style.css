@@ -28,6 +28,8 @@ ul {
 
 button {
     box-shadow: 4px 4px 7px rgb(95, 95, 95);
+    transition: .7s;
+    -webkit-transition: box-shadow .7s;
 }
 
 a {
@@ -123,7 +125,12 @@ header {
     cursor: pointer;
     background-color: #002ead;
     transition: 0.7s;
+    box-shadow: 4px -4px 7px rgb(165, 164, 164);
+    -webkit-transition: box-shadow .7s;
 }
+
+
+
 /*header end--------------------------------------------------------------------*/
 
 
@@ -422,6 +429,8 @@ li {
     background-color: #002ead;
     transition: 0.7s;
     cursor: pointer;
+    box-shadow: 4px -4px 7px rgb(92, 92, 92);
+    -webkit-transition: box-shadow .7s;
 }
 
 ::placeholder {
@@ -461,6 +470,7 @@ li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 5px;
 }
 
 .button-container button {
