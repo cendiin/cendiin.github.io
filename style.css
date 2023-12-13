@@ -283,8 +283,24 @@ p.offer-content {
 
 /*offer end --------------------------------------------------------------------*/
  
-/*Support Section ---------------------------------------------------------------*/
+/*Support Section Main Page---------------------------------------------------------------*/
 
+
+
+
+.support-section-index {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 300px;
+    background-color: #668eab;
+    color: aliceblue;
+    flex-direction: column;
+}
+
+/*Support Section Support Page---------------------------------------------------------------*/
 
 .help-list{
     list-style-type: none;
@@ -295,14 +311,12 @@ li {
     font-size: 30px;
     text-align: left;
 }
-
 .support-section {
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
     text-align: center;
-    min-height: 300px;
     background-color: #668eab;
     color: aliceblue;
     padding-top: 60px;
@@ -343,7 +357,7 @@ li {
     object-fit: contain;
 }
 
-.card-3 li{
+/* .card-3 li{
     flex-grow: 2;
 }
 .card-3 img{
@@ -376,7 +390,7 @@ li {
 }
 .card-8 img{
     flex-grow: 0;
-}
+} */
 
 .button {
     background-color: steelblue;
@@ -429,11 +443,12 @@ li {
 
     }
 
-    .support-section {
+    .support-section-index, .support-container {
         display: none;
     }
-
-
+    .support-section {
+        min-height: 70vh;
+    }
 
     .header-container {
         justify-content: center;
@@ -487,6 +502,73 @@ li {
 
 }
 
+@media (max-width: 912px) {
+    .header-container {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .header-logo {
+        min-width: 240px;
+    }
+
+    .logo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .menu-container {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        flex-direction: row;
+        min-width: 0;
+    }
+
+    .header-menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin: auto;
+
+    }
+
+    .header-menu a {
+        font-size: 16px;
+    }
+
+    .logo {
+        min-width: 10%;
+        min-height: 10%;
+        max-width: 350px;
+        max-height: 105px;
+        display: flex;
+        align-items: center;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Agent page */
@@ -507,8 +589,16 @@ li {
     min-width: 230px;
 }
 
-
-
+.agent-section {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    min-height: 800px;
+    /* background: linear-gradient(120deg,#d4e2eb,#779ed9); */
+    background-image: linear-gradient(to bottom, #668eab, #6993b6, #6d98c2, #739dcd, #7aa2d8, #7ca3dc, #7fa5e0, #82a6e4, #7fa4e1, #7ca2de, #7aa0dc, #779ed9);}
 
 
 
