@@ -103,8 +103,8 @@ header {
 
 .header-menu a:hover {
     cursor: pointer;
-    transition: 0.3s;
-    border-bottom: 2px solid red;
+    transition: 0.1s;
+    border-bottom: 2px solid black;
 }
 
 .quick-support {
@@ -183,13 +183,16 @@ header {
     font-weight: bold;
     text-decoration: none;
     color: white;
+    border-bottom: 2px solid transparent;
 }
 
 
 .offer-links-container a:hover {
-    text-decoration: underline;
+
     cursor: pointer;
-    transition: 0.7s;
+
+    transition: 0.1s;
+    border-bottom: 2px solid white;
 }
 
 .support-link, .technology-link,.website-link {
@@ -281,7 +284,23 @@ p.offer-content {
 /*offer end --------------------------------------------------------------------*/
  
 /*Support Section ---------------------------------------------------------------*/
+
+
+.help-list{
+    list-style-type: none;
+    text-align: center;
+}
+li {
+    padding: 5px;
+    font-size: 30px;
+    text-align: left;
+}
+
 .support-section {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     text-align: center;
     min-height: 300px;
     background-color: #668eab;
@@ -289,8 +308,74 @@ p.offer-content {
     padding-top: 60px;
 }
 
+.support-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .support-header {
     margin-bottom: 30px;
+}
+
+.card {
+    flex-direction: row;
+    display: flex;
+    margin: auto;
+    align-content: center;
+    align-items: center;
+}
+
+.help-list li {
+    margin: 10px;
+}
+.help-list img {
+    margin: 40px;
+}
+
+.card img {
+    padding: 5px;
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+}
+
+.card-3 li{
+    flex-grow: 2;
+}
+.card-3 img{
+    flex-grow: 2;
+}
+
+.card-5 li{
+    flex-grow: 2;
+}
+.card-5 img{
+    flex-grow: 2;
+}
+
+.card-6 li{
+    flex-grow: 2;
+}
+.card-6 img{
+    flex-grow: 0;
+}
+
+.card-7 li{
+    flex-grow: 3;
+}
+.card-7 img{
+    flex-grow: 0;
+}
+
+.card-8 li{
+    flex-grow: 2;
+}
+.card-8 img{
+    flex-grow: 0;
 }
 
 .button {
@@ -316,14 +401,7 @@ p.offer-content {
     padding-left: 5px;
 }
 
-.submit-container {
-    display: flex;
-    margin: auto;
-    align-content: center;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
+
 
 /*Footer Start--------------------------------------------------------------*/
 
@@ -409,15 +487,6 @@ p.offer-content {
 
 }
 
-
-/* Support page ----------------------------- */
-
-.help-list{
-    text-align: left;
-}
-li {
-    padding: 5px;
-}
 
 
 /* Agent page */
