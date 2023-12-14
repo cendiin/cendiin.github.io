@@ -521,10 +521,21 @@ li {
 
 /* Agent page start------------------------------------------------------- */
 
-.agent-header {
-    padding-top: 20px;
+.agent-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1000px;
 }
 
+.agent-header {
+    padding: 20px;
+}
+.agent-container p {
+    padding: 40px;
+}
 .button-container {
     display: flex;
     flex-wrap: wrap;
@@ -657,7 +668,13 @@ li {
     }
 }
 
-@media (max-width: 912px) {
+@media (max-width: 1024px) {
+    .quick-support,.bottom-button button, .support-container, .mobile {
+        display: none;
+    }
+    .support-section {
+        min-height: 70vh;
+    }
     .header-container {
         justify-content: center;
         flex-direction: row;
