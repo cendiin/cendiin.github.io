@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 50px;
 }
 
 p {
@@ -93,15 +93,16 @@ a {
 
 .header-menu a {
     font-size: 20px;
+    padding-top: 2px;
     padding-bottom: 10px;
     margin-bottom: 10px;
     font-weight: bold;
+    border-bottom: 2px solid transparent;
 }
-
 
 .header-menu a:hover {
     cursor: pointer;
-    transition: 0.2s;
+    transition: 1.5s;
     border-bottom: 2px solid black;
 }
 
@@ -149,7 +150,7 @@ a {
     max-width: 1000px;
 }
 
-.hero-header {
+.hero-header, .support-header {
     max-width: 620px;
     min-width: 100px;
     padding: 50px 0;
@@ -342,6 +343,11 @@ p.offer-content {
     flex-direction: column;
 }
 
+.support-header-index {
+    margin-bottom: 20px;
+}
+
+
 /*Support Section Support Page---------------------------------------------------------------*/
 
 .help-list{
@@ -371,10 +377,6 @@ li {
     align-content: center;
     justify-content: space-between;
     flex-direction: column;
-}
-
-.support-header {
-    margin-bottom: 30px;
 }
 
 .card {
@@ -607,7 +609,9 @@ li {
         width: 90px;
         height: 90px;
     }
-
+    .offer-links-container{
+        margin-bottom: 50px;
+    }
     .menu-container {
         display: flex;
         justify-content: space-around;
