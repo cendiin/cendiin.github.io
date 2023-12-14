@@ -292,7 +292,7 @@ a {
 }
 
 .offer-links-container h3 {
-    border-bottom: 2px solid transparent;
+    border-bottom: 4px solid transparent;
     padding-bottom: 5px;
 }
 
@@ -300,7 +300,7 @@ a {
 .offer-links-container span:hover h3{
     cursor: pointer;
     transition: 1.5s;
-    border-bottom: 2px solid white;
+    border-bottom: 4px solid white;
 }
 
 .support-link, .technology-link,.website-link {
