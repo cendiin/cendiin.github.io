@@ -18,7 +18,6 @@ h2 {
 
 p {
     font-size: 20px;
-    margin: 5rem 1rem;
 }
 
 ul {
@@ -337,7 +336,9 @@ a {
     padding: 20px;
 }
 
-
+.mission-statement-container p {
+    margin: 5rem 1rem;
+}
 /*mission statement end---------------------------------------------------*/
 
 /*offer start-----------------------------------------------------------*/
@@ -406,8 +407,8 @@ p.offer-content {
     flex-direction: column;
 }
 
-.support-header-index {
-    margin-bottom: 20px;
+.support-header-index p {
+    margin: 10px;
 }
 
 
