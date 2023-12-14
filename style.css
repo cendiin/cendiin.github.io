@@ -8,7 +8,6 @@
     scroll-behavior: smooth !important;
 }
 
-
 h1 {
     font-size: 2rem;
 }
@@ -40,13 +39,7 @@ a {
 /*header start---------------------------------------------------*/
 
 
-header {
-    width: 100%;
-    margin: 0;
-}
-
 .header-container {
-    width: 100%;
     background: #fffafa;
     display: flex;
     justify-content: space-between;
@@ -87,7 +80,7 @@ header {
 }
 
 .menu-contents {
-    padding: 20px;
+    margin: 20px;
     font-weight: bold;
 }
 
@@ -100,14 +93,15 @@ header {
 
 .header-menu a {
     font-size: 20px;
-    padding: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
 
 .header-menu a:hover {
     cursor: pointer;
-    transition: 0.1s;
+    transition: 0.2s;
     border-bottom: 2px solid black;
 }
 
@@ -143,7 +137,6 @@ header {
     align-content: center;
     justify-content: center;
     min-height: 800px;
-    /* background: linear-gradient(120deg,#d4e2eb,#779ed9); */
     background-image: linear-gradient(to top, #d4e2eb, #cbdde9, #c2d8e7, #b9d4e4, #b0cfe2, #a7cae1, #9ec4df, #95bfde, #8bb7dd, #82afdc, #7ca7db, #779ed9);    color:white;
 }
 
@@ -372,45 +365,6 @@ li {
     max-height: 60%;
     object-fit: contain;
 }
-
-
-
-
-
-/* .card-3 li{
-    flex-grow: 2;
-}
-.card-3 img{
-    flex-grow: 2;
-}
-
-.card-5 li{
-    flex-grow: 2;
-}
-.card-5 img{
-    flex-grow: 2;
-}
-
-.card-6 li{
-    flex-grow: 2;
-}
-.card-6 img{
-    flex-grow: 0;
-}
-
-.card-7 li{
-    flex-grow: 3;
-}
-.card-7 img{
-    flex-grow: 0;
-}
-
-.card-8 li{
-    flex-grow: 2;
-}
-.card-8 img{
-    flex-grow: 0;
-} */
 
 .button {
     background-color: steelblue;
