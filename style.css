@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+/*
+    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+    background-image: linear-gradient(to top, #8b2ab5, #a219a2, #b1028f, #bb007d, #c1006b, #c1006e, #c00072, #c00075, #b50b8f, #a123a9, #7f38c3, #3c4ada);    
+*/
+
+
+    --sidebar-bg-color: linear-gradient(to bottom, #000000 30%, #230817 50%, #390730, #460a53, #411b7e);;
+    --main-bg-color: linear-gradient(to bottom, #000000, #230817, #390730, #460a53, #411b7e);
+}
 
 
 * {
@@ -11,10 +22,18 @@
 
 h1 {
     font-size: 3rem;
+    color: white;
 }
 
-h2 {
+h2, h3 {
     font-size: 1.5rem;
+    text-shadow: 0px 0px 12px rgba(170,170,170,0.7);
+    color: white;
+    text-shadow: 
+    1px 0 0 black, /*right */
+    0 1px 0 black, /*top */
+    -1px 0 0 black, /*left */
+    0 -1px 0 black; /*bottom */
 }
 
 p {
@@ -35,6 +54,28 @@ a {
     text-decoration: none;
 }
 
+@keyframes scroll-watcher {
+    to { width: 100%; }
+}
+
+.scroll-watcher {
+    height: 4px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    background: white;
+
+    animation: scroll-watcher linear;
+    animation-timeline: scroll(root);
+}
+
+
+
+
+
+
+
 .content {
     width: 100%;
 }
@@ -52,7 +93,7 @@ a {
 .side-bar-content {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to top, #434343 0%, black 70%);
+    background-image: var(--sidebar-bg-color);
     color: white;
     border-color: white;
     border: 2px;
@@ -126,7 +167,8 @@ a {
 
 
 .content-box {
-    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+    background-image: var(--main-bg-color);
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,19 +190,15 @@ a {
     background-attachment: fixed;
     background-position: center bottom;
     color: white;
+    align-items: center;
+    display: flex;
 }
 
 .hero-intro {
     margin: auto;
     text-align: center;
-    margin-top: 20%;
     font-size: 5em;
     text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
-    
-}
-
-.hero-photo {
-
 }
 
 /* Cards Start */
@@ -168,7 +206,10 @@ a {
 
 .card-box {
     padding-top: 200px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
 }
 
 .card-box h2 {
@@ -185,28 +226,85 @@ a {
 }
 
 .card {
-    border: 3px solid #434343;
-    padding: 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 8px black;
+    padding: 12px 20px;
     margin-bottom: 50px;
     max-width: 800px;
     min-width: 600px;
     min-height: 400px;
+    transition: all .4s ease-in-out; 
+    background-color: rgba(0,0,0,0.5);
+}
+
+.card:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 0px 30px 6px whitesmoke;
 }
 
 .card p {
     margin: auto;
     text-align: center;
+    color: white;
+    padding: 20px;
 }
 
 .card img {
-    width: 48rem;
+    width: 100%;
     height: 16rem;
-
+    margin-top: 10px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1.2px solid grey;
+    box-shadow: 0px 0px 20px 4px black;
 }
 
 /* Cards End */
 
+.work, .projects, .future, .about {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.work {
+    background-image: url(/images/work.jpg);
+}
+.projects {
+    background-image: url(/images/codebackground.jpg);
+}
+
+.future {
+    background-image: url(/images/guitar.jpg);
+}
 
 .about {
+    display: flex;
     padding: 20rem;
+    color: white;
+    background-image: url(/images/kyoto.jpg);
+}
+
+.about div {
+    margin: auto;
+    max-width: 60%;
+    min-height: 30%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+.footer {
+    height: 130px;
+    background-image: radial-gradient(circle, #000000 20%, #0f0e0e 40%, #191718, #211f21, #2a272a);
+    color: white;
+    width: 100%;
+    text-align: center;
+    display: flex;
+
+}
+
+.footer div {
+    margin: auto;
 }
